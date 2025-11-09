@@ -51,13 +51,13 @@ const Signup: React.FunctionComponent<ISignupProps> = () => {
     }
   };
   return (
-    <div className="bg-slate-800 w-full h-screen">
+    <div className=" w-full h-screen">
       <div className="container mx-auto p-6 flex h-full">
         <div className="flex justify-center items-center w-full">
           <div className="p-6 w-2/3 hidden lg:block">
             <div className="grid grid-cols-2 gap-2">
               <img
-                className=" w-2/3 h-auto aspect-video rounded-3xl place-self-end"
+                className=" w-2/2 h-auto aspect-video rounded-3xl place-self-end"
                 src={image2}
               />
               <img
@@ -69,7 +69,7 @@ const Signup: React.FunctionComponent<ISignupProps> = () => {
                 src={image4}
               />
               <img
-                className=" w-2/3 h-auto aspect-video rounded-3xl"
+                className=" w-2/2 h-auto aspect-video rounded-3xl"
                 src={image3}
               />
             </div>
@@ -79,7 +79,7 @@ const Signup: React.FunctionComponent<ISignupProps> = () => {
               <form onSubmit={handleSubmit}>
                 <CardHeader className="space-y-1">
                   <CardTitle className="text-2xl text-center mb-4">
-                    PhotoGram
+                    SocialNet
                   </CardTitle>
                   <CardDescription>
                     Enter your email below to create your account
