@@ -30,9 +30,12 @@ const CreatePost: React.FunctionComponent<ICreatePostProps> = (props) => {
     e.preventDefault();
     console.log("Uploaded File Entry : ", fileEntry.files);
     console.log("The create post is : ", post);
-    const photoMeta: PhotoMeta[] = fileEntry.files.map((file) => {
-      return { cdnUrl: file.cdnUrl, uuid: file.uuid };
-    });
+    const photoMeta: PhotoMeta[] = fileEntry.files
+      .filter((file) => typeof file.cdnUrl === "string" && typeof file.uuid === "string")
+      .map((file) => ({
+        cdnUrl: file.cdnUrl as string,
+        uuid: file.uuid as string,
+      }));
     if (user != null) {
       const newPost: Post = {
         ...post,
@@ -50,8 +53,8 @@ const CreatePost: React.FunctionComponent<ICreatePostProps> = (props) => {
   return (
     <Layout>
       <div className="flex justify-center">
-        <div className="border max-w-3xl w-full">
-          <h3 className="bg-slate-800 text-white text-center text-lg p-2">
+        <div className="shadow-md rounded-xl max-w-3xl w-full">
+          <h3 className="bg-black  text-white text-center text-lg p-2 rounded-sm">
             Create Post
           </h3>
           <div className="p-8">

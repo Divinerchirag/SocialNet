@@ -62,13 +62,13 @@ const MyPhotos: React.FunctionComponent<IMyPhotosProps> = () => {
 
   return (
     <Layout>
-      <div className="flex justify-center">
-        <div className="border max-w-3xl w-full">
-          <h3 className="bg-slate-800 text-white text-center text-lg p-2">
+      <div className="flex justify-center ">
+        <div className="shadow-md  max-w-3xl w-full rounded-xl">
+          <h3 className="bg-black text-white text-center text-lg p-2 rounded-sm">
             My Photos
           </h3>
-          <div className="p-8">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="p-8 ">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 ">
               {data ? renderPost() : <div>...Loading</div>}
             </div>
           </div>

@@ -57,7 +57,7 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = (props) => {
   return (
     <nav className="flex flex-col relative h-screen max-w-sm w-full">
       <div className="flex justify-center m-5">
-        <div className="text-white text-lg">PhotoGram</div>
+        <div className="text-white text-3xl font-mono">SocialNet</div>
       </div>
       {navItems.map((item) => (
         <div
@@ -65,7 +65,7 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = (props) => {
             buttonVariants({ variant: "default" }),
             pathname === item.link
               ? "bg-white text-white-800 hover:bg-white rounded-none"
-              : "hover:bg-slate-950 hover:text-white bg-transparent rounded-none",
+              : "hover:bg-black hover:text-white bg-transparent rounded-none",
             "justify-start"
           )}
           key={item.name}
@@ -92,7 +92,7 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = (props) => {
           buttonVariants({ variant: "default" }),
           pathname === "/login"
             ? "bg-white text-white-800 hover:bg-white rounded-none"
-            : "hover:bg-slate-950 hover:text-white bg-transparent rounded-none",
+            : "hover:bg-black hover:text-white bg-transparent rounded-none",
           "justify-start"
         )}
       >
